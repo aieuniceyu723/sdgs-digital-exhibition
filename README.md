@@ -2,7 +2,7 @@
 
 以 SDGs 為主題、以 Awwwards 等級的設計與體驗為目標的互動式靜態網站。專案需求與協作規則見 [AGENTS.md](./AGENTS.md)。
 
-響應式展覽網站，包含 GSAP／ScrollTrigger 敘事、四種生活情境、兩組互動資料圖表、來源說明及 CSV 下載。回饋串接暫緩，目前準備首次 GitHub Pages 發布。
+響應式展覽網站，包含 GSAP／ScrollTrigger 敘事、四種生活情境、兩組互動資料圖表、來源說明及 CSV 下載。已發布至 GitHub Pages；回饋串接暫緩。
 
 已確認展覽聚焦台灣、面向一般大眾，以「現在的家庭帳單」為入口，探究家庭經濟條件與教育資源的關係。資料以政府資料開放平臺為入口，必要時延伸至政府機關官方原始報表。
 
@@ -12,7 +12,9 @@
 
 本機開發預覽：執行 `pnpm dev` 後，開啟終端顯示的 Local 網址；預設為 [http://127.0.0.1:5173/](http://127.0.0.1:5173/)。
 
-GitHub Pages：尚未部署。完成部署並驗證後，將以實際公開網址更新此處，提交並推送至 Repo。
+正式網站：[帳單之後，還有多少選擇？](https://aieuniceyu723.github.io/sdgs-digital-exhibition/)
+
+原始碼：[GitHub Repo](https://github.com/aieuniceyu723/sdgs-digital-exhibition)
 
 ## 技術基礎
 
@@ -86,7 +88,8 @@ GitHub Pages 的發布來源須設為 GitHub Actions。`main` 的程式變更會
 - 已確認本機工具、快取、相依套件與私人環境檔受到 Git 忽略規則保護。
 - 網站已通過正式建置及 3 項資料測試；互動、鍵盤、來源視窗與 CSV 下載已在瀏覽器驗證。
 - 檢查 320、390、768、1024、1440px 寬度，沒有整頁水平溢出；減少動態後可閱讀所有內容。
-- GitHub Pages 公開部署、外部觀眾理解與 Google 回饋尚未驗證。
+- GitHub Pages 的建置及部署已成功；公開頁面與全部前端資源回傳 HTTP 200，資源內容與本機正式建置相符。已在公開網站確認情境切換、所得組鍵盤操作與數值更新，沒有 console error 或 warning。
+- 外部觀眾理解與 Google 回饋尚未驗證。
 
 ## 參考文件
 

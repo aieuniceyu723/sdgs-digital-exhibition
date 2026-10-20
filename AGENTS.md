@@ -36,6 +36,7 @@
 ## 開發工具基礎
 
 - 已完成第一版網站實作，檔案為 `index.html`、`src/style.css`、`src/main.js`、`src/data.js`、`public/favicon.svg`；實際狀態與驗證範圍見 `docs/website.md`。
+- 正式網站已發布並驗證：https://aieuniceyu723.github.io/sdgs-digital-exhibition/ 。Repo 為 `aieuniceyu723/sdgs-digital-exhibition`，`main` 分支透過 GitHub Actions 部署；僅修改 Markdown 不重新部署。
 - 工作展名採「帳單之後，還有多少選擇？」；不宣稱使用者已定案名稱、已獲獎或觀眾已理解。使用者已授權本輪網站實作，先前規劃階段的停止點不阻擋本輪開發。
 - 所有互動在頁面記憶體中運作，沒有回饋表單、Google 串接、資料提交或追蹤服務；後續未有新指示前持續暫緩回饋串接。
 

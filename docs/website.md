@@ -38,12 +38,14 @@ pnpm build
 pnpm preview
 ```
 
-`pnpm build` 以相對資源路徑輸出至 `dist/`。本機開發只綁定 `127.0.0.1`，以啟動命令實際顯示的網址為準。GitHub Pages 尚未公開部署。
+`pnpm build` 以相對資源路徑輸出至 `dist/`。本機開發只綁定 `127.0.0.1`，以啟動命令實際顯示的網址為準。
+
+正式網站：[https://aieuniceyu723.github.io/sdgs-digital-exhibition/](https://aieuniceyu723.github.io/sdgs-digital-exhibition/)。[首次部署工作流程](https://github.com/aieuniceyu723/sdgs-digital-exhibition/actions/runs/39423752232)已成功，網站產物對應程式提交 `5c8383087ac1d64bde1ee0ebfd6f504aa3ed5e7e`。後續僅更新 Markdown 不重新建置網站。
 
 ## 已執行的檢查
 
 - 正式建置通過；產物包含單一入口、樣式、JavaScript 及圖示。
-- 以正式產物在 `/exhibition/` 子目錄提供預覽，確認 8 個費用區間、5 個所得組、情境切換及鍵盤操作可用，沒有瀏覽器錯誤；這是本機子目錄檢查，未宣稱已部署 GitHub Pages。
+- 以正式產物在本機 `/exhibition/` 子目錄提供預覽，確認 8 個費用區間、5 個所得組、情境切換及鍵盤操作可用，沒有瀏覽器錯誤。
 - 3 項 Node 測試：費用分類及尾差對照官方引用快照、家庭組別與人口／教育支出對照、圖表尺度容納公布值；公開快照位於 `tests/fixtures/official-tables.json`，不依賴本機研究筆記。
 - 瀏覽器逐一操作 4 個情境、8 個費用區間及 5 個所得組，畫面數值、說明及選取狀態正確。
 - 瀏覽器以 Enter 操作費用區間；來源視窗開啟、Escape 關閉並回到開啟按鈕。
@@ -51,11 +53,13 @@ pnpm preview
 - 320、390、768、1024、1440px 寬度均未出現整頁水平溢出；檢視桌面與手機畫面。
 - 手動減少動態切換後，所有揭示內容均可見，捲動方式為 `auto`。另以 CSS 強制減少動態時採即時捲動，避免 ScrollTrigger refresh 還原的行內 smooth 設定覆蓋偏好。
 - 檢查時未收到瀏覽器 console error 或 warning。
+- GitHub Actions 的建置及部署工作均成功。公開網站、圖示、CSS 與 JavaScript 均回傳 HTTP 200，資源位元組與本機正式建置一致。
+- 在 GitHub Pages 實際切換「接送往返」情境，以 Enter 選擇第五所得組，顯示全年教育支出 55,147 元；頁面包含 8 個費用區間與 5 個所得組，沒有 console error 或 warning。
 
-這些是本機實作檢查，尚未執行完整無障礙稽核、其他瀏覽器或實機檢查，亦未以測試宣稱觀眾理解或教育成效已改善。系統減少動態已依 `matchMedia` 實作，本輪瀏覽器操作驗證的是手動切換。
+上述檢查涵蓋本機實作及公開部署，尚未執行完整無障礙稽核、其他瀏覽器或實機檢查，亦未以測試宣稱觀眾理解或教育成效已改善。系統減少動態已依 `matchMedia` 實作，本輪瀏覽器操作驗證的是手動切換。
 
 ## 保留的限制與後續
 
 2022 年兒童分布與 2025 年全體家庭平均沒有拼接；費用不作為學習品質替代指標。現有資料尚不足以證明經濟分化造成教育資源差距或差距正在擴大。
 
-後續可處理 GitHub Repo／Pages 發布、外部觀眾試看、補強經濟條件與學童資源交叉資料；Google 回饋串接依使用者新指示另行進行。
+後續可安排外部觀眾試看，補強經濟條件與學童資源交叉資料；Google 回饋串接依使用者新指示另行進行。
