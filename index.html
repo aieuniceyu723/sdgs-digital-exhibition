@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f2eee5" />
+    <meta
+      name="description"
+      content="從台灣家庭的帳單出發，探索家庭收入、教育支出與孩子的學習選擇。一場以政府開放資料為線索的互動數位展覽。"
+    />
+    <meta property="og:title" content="帳單之後，還有多少選擇？" />
+    <meta
+      property="og:description"
+      content="家庭收入不同，孩子能取得的教育資源，會不會也不同？從一張帳單，重新看見學習的條件。"
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>帳單之後，還有多少選擇？｜台灣家庭與教育資源展</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳至展覽內容</a>
+    <header class="site-header">
+      <a class="brand" href="#opening" aria-label="帳單之後，回到開場">
+        <svg class="brand-mark" viewBox="0 0 32 38" fill="none" aria-hidden="true">
+          <path
+            d="M3 2h26v33l-4-3-4 3-5-3-5 3-4-3-4 3V2Z"
+            stroke="currentColor"
+            stroke-width="1.5"
+          />
+          <path d="M9 11h14M9 17h14M9 23h7" stroke="currentColor" stroke-width="1.5" />
+        </svg>
+        <span>帳單之後<small>AFTER THE BILL</small></span>
+      </a>
+      <nav class="site-nav" aria-label="展覽章節">
+        <a href="#choices"><span>01</span> 選擇的條件</a>
+        <a href="#expenses"><span>02</span> 一個孩子的費用</a>
+        <a href="#households"><span>03</span> 家庭的差異</a>
+      </nav>
+      <button class="source-button" type="button" data-open-sources>
+        資料與出處 <span aria-hidden="true">↗</span>
+      </button>
+      <div class="reading-progress" aria-hidden="true"></div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <section class="hero" id="opening" aria-labelledby="hero-heading">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow hero-intro">
+              <span class="status-dot"></span> 台灣家庭 × 教育資源　數位展覽
+            </p>
+            <h1 id="hero-heading">
+              <span class="hero-line">帳單之後，</span
+              ><span class="hero-line"
+                >還有多少<span class="title-accent"
+                  >選擇<span class="title-question">？</span></span
+                ></span
+              >
+            </h1>
+            <div class="hero-description">
+              <span class="tiny-cross" aria-hidden="true">＋</span>
+              <div>
+                <p>家裡收入不同，<br />孩子能取得的教育資源，會不會也不同？</p>
+                <p class="muted">從日常開銷出發，看見學習機會背後的家庭條件。</p>
+              </div>
+            </div>
+            <a class="primary-link" href="#choices"
+              >從一張帳單開始 <span aria-hidden="true">↘</span></a
+            >
+          </div>
+
+          <div
+            class="hero-art"
+            role="img"
+            aria-label="2025 年第三所得組家庭的統計摘錄：平均每戶 2.70 人，平均每戶全年教育支出 15,777 元；在學人數未知。"
+          >
+            <div class="art-orbit" aria-hidden="true"></div>
+            <div class="art-coordinates" aria-hidden="true">
+              <span>25°02′ N</span><span>121°33′ E</span>
+            </div>
+            <div class="paper-back paper-back-one" aria-hidden="true"><span>TIME / 時間</span></div>
+            <div class="paper-back paper-back-two" aria-hidden="true">
+              <span>OPPORTUNITY / 機會</span>
+            </div>
+            <article class="hero-receipt" aria-hidden="true">
+              <div class="receipt-top">
+                <span>TAIWAN<br />HOUSEHOLD ARCHIVE</span><span class="receipt-star">✳</span>
+              </div>
+              <p class="receipt-kicker">家庭帳單 / 統計摘錄</p>
+              <h2>數字之外，<br />還有一些事。</h2>
+              <div class="receipt-rule"></div>
+              <dl class="receipt-facts">
+                <div>
+                  <dt>統計年度</dt>
+                  <dd>2025</dd>
+                </div>
+                <div>
+                  <dt>家庭所得組</dt>
+                  <dd>第三組</dd>
+                </div>
+                <div>
+                  <dt>平均每戶人數</dt>
+                  <dd>2.70 <small>人</small></dd>
+                </div>
+              </dl>
+              <div class="receipt-rule"></div>
+              <p class="receipt-total-label">每戶全年平均教育支出 / NTD</p>
+              <p class="receipt-total">15,777<span>元</span></p>
+              <div class="receipt-question">
+                <span>?</span>
+                <p>這張帳單還沒告訴我們，<br /><strong>家裡有幾位孩子正在上學。</strong></p>
+              </div>
+              <div class="barcode"></div>
+              <p class="receipt-footnote">
+                全體家庭，包含沒有在學成員的家庭<br />主計總處・114 年家庭收支調查第 6 表
+              </p>
+            </article>
+            <span class="art-label" aria-hidden="true">每一筆支出，<br />都連著一種選擇。</span>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <span><span class="red-dot"></span> TAIWAN, EVERYDAY LIFE</span
+          ><span>以政府開放資料為線索</span
+          ><a href="#choices">向下，展開帳單 <span aria-hidden="true">↓</span></a>
+        </div>
+      </section>
+
+      <div class="question-strip" aria-hidden="true">
+        <span>INCOME & OPPORTUNITY</span>
+        <p>家庭收入，會影響孩子的學習機會嗎？</p>
+        <span class="strip-star">✳</span>
+      </div>
+
+      <section
+        class="section choices-section chapter"
+        id="choices"
+        aria-labelledby="choices-heading"
+      >
+        <div class="section-heading">
+          <p class="section-index"><span>01</span> THE CONDITIONS OF CHOICE</p>
+          <div class="heading-grid">
+            <h2 id="choices-heading" data-reveal>
+              一個選擇，<br />需要多少<span class="serif-accent">條件？</span>
+            </h2>
+            <p class="section-intro" data-reveal>
+              房租、水電、伙食之外，家庭還能為孩子的學習動用多少金錢與時間？<br /><br />先用放學後的生活想一想。費用、接送，以及適合孩子的照顧，都需要一起考慮。
+            </p>
+          </div>
+        </div>
+        <div class="scenario-layout" data-reveal>
+          <div class="scenario-selector">
+            <p class="small-label">選一個你會先想到的安排</p>
+            <div class="scenario-options" role="group" aria-label="生活情境">
+              <button
+                type="button"
+                class="scenario-option is-selected"
+                data-scenario="care"
+                aria-pressed="true"
+                aria-controls="scenario-content"
+              >
+                <span class="option-number">01</span
+                ><span>課後照顧<small>放學後，可以待在哪裡？</small></span
+                ><span class="option-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button
+                type="button"
+                class="scenario-option"
+                data-scenario="learning"
+                aria-pressed="false"
+                aria-controls="scenario-content"
+              >
+                <span class="option-number">02</span
+                ><span>補習與才藝<small>孩子想學什麼，需要什麼？</small></span
+                ><span class="option-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button
+                type="button"
+                class="scenario-option"
+                data-scenario="transport"
+                aria-pressed="false"
+                aria-controls="scenario-content"
+              >
+                <span class="option-number">03</span
+                ><span>接送往返<small>誰能接送，怎麼到得了？</small></span
+                ><span class="option-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button
+                type="button"
+                class="scenario-option"
+                data-scenario="family"
+                aria-pressed="false"
+                aria-controls="scenario-content"
+              >
+                <span class="option-number">04</span
+                ><span>家人陪伴<small>家人能挪出多少時間？</small></span
+                ><span class="option-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+            <p class="scenario-caption">
+              生活情境，用來列出需要了解的條件。<br />你可以從自己的成長或生活經驗出發。
+            </p>
+          </div>
+          <article
+            class="scenario-content"
+            id="scenario-content"
+            aria-live="polite"
+            aria-atomic="true"
+          >
+            <div class="scenario-topline">
+              <span class="small-label" id="scenario-kicker">AFTER SCHOOL / 課後照顧</span
+              ><span class="line-icon" id="scenario-icon" aria-hidden="true">⌂</span>
+            </div>
+            <h3 id="scenario-title">找到地方，<br />還要接得上生活。</h3>
+            <p id="scenario-description">
+              課後照顧能否用得上，需要一起看看家庭的費用、時間與孩子的需要。
+            </p>
+            <dl class="condition-list" id="condition-list">
+              <div>
+                <dt>費用</dt>
+                <dd>每月能負擔多少，還有哪些相關支出？</dd>
+              </div>
+              <div>
+                <dt>時間</dt>
+                <dd>開放到幾點，能不能接上家人的工作與接送？</dd>
+              </div>
+              <div>
+                <dt>品質</dt>
+                <dd>孩子需要哪種協助，服務是否適合？</dd>
+              </div>
+            </dl>
+            <p class="scenario-note" id="scenario-note">
+              名額、地點，以及能否由家人陪伴，也需要一起確認。
+            </p>
+          </article>
+        </div>
+        <div class="section-bridge">
+          <span class="bridge-line"></span>
+          <p>先帶著你在意的條件，<br /><strong>看看數據能回答多少。</strong></p>
+          <a href="#expenses" aria-label="繼續閱讀兒童每月費用資料">↓</a>
+        </div>
+      </section>
+
+      <section
+        class="section expenses-section chapter"
+        id="expenses"
+        aria-labelledby="expenses-heading"
+      >
+        <div class="section-heading">
+          <p class="section-index"><span>02</span> THE COST OF LEARNING</p>
+          <div class="heading-grid">
+            <h2 id="expenses-heading" data-reveal>
+              一個孩子，<br />每月的<span class="serif-accent">學習費用。</span>
+            </h2>
+            <div class="section-intro" data-reveal>
+              <p>先看見費用的分布，再追問支出背後的條件。</p>
+              <p class="data-tag"><span>2022</span> 國小學齡兒童 · 一名兒童 · 每月</p>
+              <p class="data-small">
+                補習及課後照顧費用合併觀察；<br />百分比以全體學齡兒童為分母，包含未付費者。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="expense-explorer" data-reveal>
+          <div class="fee-focus" aria-live="polite" aria-atomic="true">
+            <p class="small-label">選擇費用區間，讀一讀資料</p>
+            <p class="focus-number"><span id="fee-value">37.5</span><span>%</span></p>
+            <p class="focus-label" id="fee-label">每月 5,000–9,999 元</p>
+            <p class="focus-description" id="fee-description">
+              37.5% 的學齡兒童，家長或主要照顧者填報的每月補習及課後照顧費落在這個區間。
+            </p>
+            <div class="focus-index" aria-hidden="true"><span id="fee-index">03</span> / 08</div>
+          </div>
+          <div class="fee-chart-wrap">
+            <div class="chart-top-label">
+              <span>每月費用 / 新臺幣元</span><span>占全體學齡兒童</span>
+            </div>
+            <div
+              class="fee-chart"
+              id="fee-chart"
+              role="group"
+              aria-label="依費用區間探索兒童比率"
+            ></div>
+            <div class="chart-axis">
+              <span>0</span><span>10</span><span>20</span><span>30</span><span>40%</span>
+            </div>
+            <noscript
+              ><p>互動圖表需要 JavaScript。下方「完整資料表」可直接閱讀全部數值。</p></noscript
+            >
+          </div>
+        </div>
+        <div class="data-reading-note">
+          <span class="note-symbol" aria-hidden="true">↳</span>
+          <div>
+            <h3>「未付費」，還不能告訴我們全部。</h3>
+            <p>
+              單靠費用分類，還不知道孩子是否使用免費資源、由誰陪伴，或為什麼沒有付費。金額較高，也不直接代表學習品質較好。
+            </p>
+          </div>
+          <span class="note-side">BEYOND THE NUMBER</span>
+        </div>
+        <div class="data-bottom">
+          <p>
+            本表沒有家庭所得交叉，也未呈現服務品質與開放時間。<br />比率因四捨五入合計為
+            100.1%，依官方公布值保留。
+          </p>
+          <a
+            class="text-link"
+            href="https://www.mohw.gov.tw/dl-86168-9a466094-0c39-4ed1-b95e-fdbc74e7c28e.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >衛福部 111 年調查・表 24 <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <details class="data-table-details">
+          <summary>完整資料表</summary>
+          <div class="table-scroll">
+            <table>
+              <caption>
+                2022 年國小學齡兒童每月補習及課後照顧費用；全體學齡兒童為分母
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">費用（新臺幣元／月）</th>
+                  <th scope="col">比率</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">未付費</th>
+                  <td>12.9%</td>
+                </tr>
+                <tr>
+                  <th scope="row">1–4,999</th>
+                  <td>27.3%</td>
+                </tr>
+                <tr>
+                  <th scope="row">5,000–9,999</th>
+                  <td>37.5%</td>
+                </tr>
+                <tr>
+                  <th scope="row">10,000–14,999</th>
+                  <td>14.4%</td>
+                </tr>
+                <tr>
+                  <th scope="row">15,000–19,999</th>
+                  <td>5.0%</td>
+                </tr>
+                <tr>
+                  <th scope="row">20,000–24,999</th>
+                  <td>1.8%</td>
+                </tr>
+                <tr>
+                  <th scope="row">25,000–29,999</th>
+                  <td>0.8%</td>
+                </tr>
+                <tr>
+                  <th scope="row">30,000 以上</th>
+                  <td>0.4%</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+
+      <section
+        class="section household-section chapter"
+        id="households"
+        aria-labelledby="household-heading"
+      >
+        <div class="section-heading">
+          <p class="section-index"><span>03</span> DIFFERENT HOUSEHOLDS</p>
+          <div class="heading-grid">
+            <h2 id="household-heading" data-reveal>
+              支出不同，<br />選擇也<span class="serif-accent">不同嗎？</span>
+            </h2>
+            <div class="section-intro" data-reveal>
+              <p>這次換一份資料，看看五個所得組的家庭。<br />各組教育支出不同，每戶人數也不同。</p>
+              <p class="data-tag"><span>2025</span> 全體家庭 · 每戶 · 全年平均</p>
+              <p class="data-small">
+                包含沒有在學成員的家庭；<br />與上一節的一名兒童月費，年份及觀察單位都不同。
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="household-explorer" data-reveal>
+          <article class="household-receipt" aria-live="polite" aria-atomic="true">
+            <div class="household-receipt-head">
+              <span>HOUSEHOLD / 2025</span><span id="household-code">03</span>
+            </div>
+            <h3 id="household-label">第三所得組</h3>
+            <p class="household-subtitle">依每戶可支配所得由低到高分組</p>
+            <div class="receipt-rule"></div>
+            <p class="small-label">每戶全年平均教育支出</p>
+            <p class="household-amount">
+              <span id="household-value">15,777</span><small>元</small>
+            </p>
+            <div class="household-people">
+              <span>平均每戶人數</span
+              ><strong><span id="household-people">2.70</span><small>人</small></strong>
+            </div>
+            <div class="unknown-row">
+              <span>其中幾人正在就學？</span><strong>此表未提供</strong>
+            </div>
+            <p class="receipt-disclaimer">
+              人口包含成年人等成員，不能當作學生人數。<br />統計平均也無法推算個別家庭應賺多少。
+            </p>
+          </article>
+          <div class="household-comparison">
+            <div class="chart-top-label">
+              <span>每戶全年平均教育支出 / 新臺幣元</span><span>選一個所得組 ↓</span>
+            </div>
+            <div
+              class="income-chart"
+              id="income-chart"
+              role="group"
+              aria-label="比較五個家庭所得組"
+            ></div>
+            <p class="comparison-label">
+              <span>← 可支配所得較低</span><span>可支配所得較高 →</span>
+            </p>
+            <div class="comparison-insight">
+              <span aria-hidden="true">＋</span>
+              <p>
+                <strong>在學孩子有幾位，是重要的缺口。</strong><br />第 1 組平均每戶 1.55 人，第 5
+                組 3.77 人。這裡的教育支出，還不能當成相同就學需求下的每名學生資源比較。
+              </p>
+            </div>
+            <noscript><p>下方「完整資料表」可直接閱讀五個所得組的數值。</p></noscript>
+          </div>
+        </div>
+        <div class="data-bottom">
+          <p>
+            資料採主計總處 114 年家庭收支調查第 6 表。<br />組別平均、家庭人口與教育支出，均保留官方原數。
+          </p>
+          <a
+            class="text-link"
+            href="https://www.stat.gov.tw/News_Content.aspx?n=3908&s=236588"
+            target="_blank"
+            rel="noopener noreferrer"
+            >主計總處・114 年調查報告 <span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <details class="data-table-details">
+          <summary>完整資料表</summary>
+          <div class="table-scroll">
+            <table>
+              <caption>
+                2025 年全體家庭，包含沒有在學成員的家庭；每戶全年平均
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">所得組</th>
+                  <th scope="col">每戶人數（人）</th>
+                  <th scope="col">教育支出（新臺幣元／年）</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">第 1 組（最低）</th>
+                  <td>1.55</td>
+                  <td>1,392</td>
+                </tr>
+                <tr>
+                  <th scope="row">第 2 組</th>
+                  <td>2.08</td>
+                  <td>6,227</td>
+                </tr>
+                <tr>
+                  <th scope="row">第 3 組</th>
+                  <td>2.70</td>
+                  <td>15,777</td>
+                </tr>
+                <tr>
+                  <th scope="row">第 4 組</th>
+                  <td>3.35</td>
+                  <td>33,450</td>
+                </tr>
+                <tr>
+                  <th scope="row">第 5 組（最高）</th>
+                  <td>3.77</td>
+                  <td>55,147</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </section>
+
+      <section class="section closing-section" id="questions" aria-labelledby="closing-heading">
+        <p class="section-index"><span>04</span> KEEP THE QUESTION OPEN</p>
+        <div class="closing-top">
+          <h2 id="closing-heading" data-reveal>
+            帳單看得見支出。<br />我們還需要看見，<br /><span class="serif-accent"
+              >選擇的條件。</span
+            >
+          </h2>
+          <span class="closing-asterisk" aria-hidden="true">✳</span>
+        </div>
+        <p class="closing-intro" data-reveal>
+          家庭經濟差異，是否擴大孩子的教育資源差距？<br />眼前兩份資料還不足以下結論。要回答這個問題，我們需要：
+        </p>
+        <ol class="evidence-list">
+          <li>
+            <span class="evidence-number">01</span>
+            <h3>同一群孩子的家庭經濟條件</h3>
+            <p>把家庭收支與孩子的費用、資源放在一起看。</p>
+          </li>
+          <li>
+            <span class="evidence-number">02</span>
+            <h3>需求與實際可取得的服務</h3>
+            <p>包含就學階段、照顧需要，以及服務的時間與品質。</p>
+          </li>
+          <li>
+            <span class="evidence-number">03</span>
+            <h3>相同口徑的跨年資料</h3>
+            <p>才能進一步判斷差距是否隨時間擴大。</p>
+          </li>
+        </ol>
+        <div class="takeaway">
+          <p class="small-label">帶走一個問題</p>
+          <h3>下一次看見一個家庭的選擇，<br />你會想先了解什麼？</h3>
+          <div class="takeaway-options" role="group" aria-label="選一個你想繼續了解的問題">
+            <button type="button" data-question="cost" aria-pressed="false">
+              費用能否負擔 <span aria-hidden="true">↗</span></button
+            ><button type="button" data-question="service" aria-pressed="false">
+              服務的時間與品質 <span aria-hidden="true">↗</span></button
+            ><button type="button" data-question="gap" aria-pressed="false">
+              差距是否正在擴大 <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p class="takeaway-response" id="takeaway-response" aria-live="polite">
+            先多了解一個條件，再試著理解一個選擇。
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-title">帳單之後<span>AFTER THE BILL</span></div>
+      <div class="footer-meta">
+        <p>台灣家庭 × 教育資源<br />資料查核：2026.10.20</p>
+        <p>
+          連結永續發展目標<br /><a
+            href="https://sdgs.un.org/goals/goal4"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SDG 4 優質教育 ↗</a
+          >
+          /
+          <a href="https://sdgs.un.org/goals/goal10" target="_blank" rel="noopener noreferrer"
+            >SDG 10 減少不平等 ↗</a
+          >
+        </p>
+        <div>
+          <button type="button" class="footer-button" data-open-sources>資料與閱讀方式 ↗</button
+          ><button type="button" class="footer-button" id="motion-toggle" aria-pressed="false">
+            減少動態效果
+          </button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>以公開資料開啟討論，讓每一個數字都有出處。</span><a href="#opening">回到開場 ↑</a>
+      </div>
+    </footer>
+
+    <dialog id="source-dialog" aria-labelledby="source-heading">
+      <div class="dialog-header">
+        <span class="small-label">SOURCES & METHODOLOGY</span
+        ><button type="button" class="dialog-close" aria-label="關閉資料說明" autofocus>×</button>
+      </div>
+      <h2 id="source-heading">資料有出處，<br />解讀也有邊界。</h2>
+      <p class="dialog-intro">
+        本展以政府資料開放平臺為入口，引用政府機關原始報表。兩份資料分別呈現，沒有拼接成同一群家庭或兒童。
+      </p>
+      <article class="source-entry">
+        <span>01 / 2022</span>
+        <h3>兒童及少年生活狀況調查・兒童篇</h3>
+        <p>
+          衛生福利部，111 年資料。表 24，印刷頁
+          227–228。國小學齡兒童，由家長或主要照顧者填答每名兒童每月補習及課後照顧費；分母包含未付費者。
+        </p>
+        <p>
+          比率依公布值保留，四捨五入後合計
+          100.1%。本表未提供所得交叉，無法據此推算不同收入家庭各有多少費用或資源。
+        </p>
+        <div class="source-links">
+          <a
+            href="https://www.mohw.gov.tw/dl-86168-9a466094-0c39-4ed1-b95e-fdbc74e7c28e.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            >官方原始報告 ↗</a
+          ><button type="button" data-download="fees">下載引用數據 CSV ↓</button>
+        </div>
+      </article>
+      <article class="source-entry">
+        <span>02 / 2025</span>
+        <h3>家庭收支調查・戶為單位第 6 表</h3>
+        <p>
+          行政院主計總處，114
+          年資料。依每戶可支配所得分五組；本展引用每戶全年平均教育支出與每戶人數。對象為全體家庭，包含沒有在學成員的家庭。
+        </p>
+        <p>
+          各組在學人數未提供，不能視為每名學生的資源比較。所得統計含自用住宅設算租金等項目，與實際現金帳單不同。
+        </p>
+        <div class="source-links">
+          <a
+            href="https://www.stat.gov.tw/News_Content.aspx?n=3908&s=236588"
+            target="_blank"
+            rel="noopener noreferrer"
+            >官方年度報告 ↗</a
+          ><button type="button" data-download="households">下載引用數據 CSV ↓</button>
+        </div>
+      </article>
+      <div class="source-bottom">
+        <p>
+          資料入口：<a
+            href="https://data.gov.tw/dataset/6565"
+            target="_blank"
+            rel="noopener noreferrer"
+            >政府資料開放平臺 ↗</a
+          ><br />SDGs 連結為策展方向；支出統計不等於聯合國指標
+          4.5.1，也未證明教育機會的因果關係或差距擴大。
+        </p>
+        <p>本展的生活情境為策展構想，並非特定家庭的真實案例。</p>
+      </div>
+    </dialog>
+  </body>
+</html>

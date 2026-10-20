@@ -1,0 +1,3 @@
+storeDir: .tools/pnpm-store
+cacheDir: .tools/pnpm-cache
+saveExact: true

@@ -1,0 +1,28 @@
+# Dependencies and build output
+node_modules/
+dist/
+.vite/
+coverage/
+
+# Local toolchain and caches
+.tools/
+.pnpm-store/
+.npm/
+
+# Private configuration
+.env
+.env.*
+!.env.example
+.gh-config/
+
+# Local planning records and installed skills
+research/
+.agents/
+
+# Local artifacts
+artifacts/
+.DS_Store
+*.log
+*.tsbuildinfo
+.idea/
+.vscode/

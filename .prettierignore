@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.tools/
+.agents/
+research/
+artifacts/
+.pnpm-store/
+pnpm-lock.yaml
+coverage/
+.env
+.env.*

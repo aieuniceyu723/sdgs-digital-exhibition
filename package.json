@@ -1,0 +1,26 @@
+{
+  "name": "sdgs-digital-exhibition",
+  "version": "0.0.0",
+  "private": true,
+  "description": "SDGs 互動式數位策展靜態網站",
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.0.0 <25.0.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build --base=./",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "node --test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "gsap": "3.15.0"
+  },
+  "devDependencies": {
+    "prettier": "3.9.10",
+    "vite": "8.3.4"
+  }
+}
